@@ -36,31 +36,83 @@
 //     return 0;
 // }
 
+// #include<iostream>
+// #include<map>
+// using namespace std;
+
+// int main(){
+
+//     map<int, string>m;
+
+//     m[1]="Amit";
+//     m[3]="Pratham";
+
+//     cout<<m[3]<<endl;
+//     m.insert({ 2, "Nikhil" });
+
+//     cout<<m[2]<<endl;
+
+//     for(auto i:m){
+//         cout<<i.first<<" "<<i.second<<endl;
+//     }
+//     cout<<m.count(9)<<endl;// for finding
+
+//     if(m.find(1) != m.end()){
+//         cout<<"Found";
+//     }
+
+//     return 0;
+
+// }
+
+
+// #include<iostream>
+// #include<string.h>
+// using namespace std;
+
+// int main(){
+
+//     string s="abc";
+
+//     s.erase(1,1);
+
+//     cout<<s <<endl;
+//     cout<<s[0]<<endl;
+//     cout<<s[1]<<endl;
+//     cout<<s[2]<<endl;
+
+
+//     return 0;
+// }
+
 #include<iostream>
-#include<map>
 using namespace std;
 
+int powerOfTwo(int n ,int x){
+
+    //BC.
+    if(x==1){
+        return 1;
+    }
+    int ans = 2 * powerOfTwo(2^(x-1),n);
+    return ans;
+}
+
 int main(){
+    int x;
+    cin>>x;
+    int n;
+    cin>>n;
 
-    map<int, string>m;
+    if(powerOfTwo(n,x)==n){
 
-    m[1]="Amit";
-    m[3]="Pratham";
+        cout<< true<<endl;
 
-    cout<<m[3]<<endl;
-    m.insert({ 2, "Nikhil" });
-
-    cout<<m[2]<<endl;
-
-    for(auto i:m){
-        cout<<i.first<<" "<<i.second<<endl;
     }
-    cout<<m.count(9)<<endl;// for finding
-
-    if(m.find(1) != m.end()){
-        cout<<"Found";
+    else{
+        cout<< false<<endl;
     }
 
-    return 0;
+    
 
 }
