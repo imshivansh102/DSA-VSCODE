@@ -1,9 +1,9 @@
 //PIVOT ELEMENT
 
-
 #include<iostream>
 #include<vector>
 using namespace std;
+
 int findPivot(vector<int>arr){
     int s=0;
     int e=arr.size()-1;
@@ -30,8 +30,10 @@ int findPivot(vector<int>arr){
 }
 
 int main(){
+
     vector<int>arr{9,10,2,4,6,8};
     int ans=findPivot(arr);
+    
     if(ans==-1){
         cout<<"kuch gadbad hai"<<endl;
     }
@@ -39,5 +41,7 @@ int main(){
         cout<<"ans is at index:"<<ans<<endl;
         cout<<"value of ans is:"<<arr[ans]<<endl;
     }
+
     return 0;
+
 }
