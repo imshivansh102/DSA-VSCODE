@@ -18,7 +18,13 @@ class Node {
 };
 
 // I want to insert a node right at the head of Linked List.
-void insertAtHead(Node* &head, int data) {
+void insertAtHead(Node* &head,Node* &tail, int data) {
+    if(head == NULL) { // condition when head and tail is null.
+        Node* newNode = new Node(data);
+        head = newNode;
+        tail = newNode;
+        return;
+    }
     // step 1:
     Node* newNode = new Node(data);
     // step 2:
@@ -28,7 +34,14 @@ void insertAtHead(Node* &head, int data) {
 
 }
 // I want to insert a node right at the tail of Linked List.
-void insertAtTail(Node* &tail, int data) {
+void insertAtTail(Node* &head,Node* &tail, int data) {
+
+    if(head == NULL) { // condition when head and tail is null.
+        Node* newNode = new Node(data);
+        head = newNode;
+        tail = newNode;
+        return;
+    }
     // step 1:
     Node* newNode = new Node(data);
     // step 2:
@@ -38,9 +51,9 @@ void insertAtTail(Node* &tail, int data) {
 
 }
 
-void print(Node* &head) { // Traversal of Linked List.
+void print(Node* &head) { 
 
-    Node* temp = head; // new variable created.
+    Node* temp = head; 
     while(temp != NULL) {
         cout << temp->data << " ";
         temp = temp->next;
@@ -50,14 +63,15 @@ void print(Node* &head) { // Traversal of Linked List.
 
 int main() {
 
-    Node* head = new Node(10); // it is from starting.
-    Node* tail = head;
-    insertAtHead(head,20); // this function call is for inserting.
-    insertAtHead(head,30);
-    insertAtHead(head,40);
-    insertAtHead(head,50);
-    insertAtTail(tail,90);
-    print(head); // This is for printing.
+    Node* head = NULL;
+    Node* tail = NULL;
+    insertAtHead(head,tail,20); 
+    insertAtHead(head,tail,30);
+    insertAtHead(head,tail,40);
+    insertAtHead(head,tail,50);
+    insertAtTail(head,tail,90);
+    insertAtTail(head,tail,77);
+    print(head); 
     
 
     return 0;
