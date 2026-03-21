@@ -28,7 +28,7 @@ int main() {
 
     
     head->next = second;
-    second->next = third;
+    
 
     print(head); 
 
