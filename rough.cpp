@@ -28,7 +28,6 @@ int main() {
 
     
     head->next = second;
-    
 
     print(head); 
 
