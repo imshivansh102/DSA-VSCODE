@@ -27,7 +27,7 @@ int main() {
     Node* second = new Node(20);
     Node* third = new Node(30);
 
-    // Linking nodes
+    
     head->next = second;
     second->next = third;
 
