@@ -37,7 +37,7 @@ Node* reverse(Node* &prev, Node* &curr) {
     Node* forward = curr -> next;
     curr -> next = prev;
     // recursive call.
-    reverse(curr, forward);
+    return reverse(curr, forward);
 
 }
 
@@ -60,7 +60,7 @@ int main() {
     cout << "printing the linked list:" << endl;
     print(first);
     cout << endl;
-    cout << "After reversal " << endl;
+    cout << "Linked List Reversed:" << endl;
     Node* prev = NULL;
     Node* curr = head;
     head = reverse(prev, curr);
