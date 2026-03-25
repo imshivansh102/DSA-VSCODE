@@ -77,7 +77,7 @@ int main() {
     s.push(40);
     s.push(50);
 
-    while(!s.isEmpty()) {
+    while(!s.isEmpty()) { // It is way to show a Stack.
         cout << s.getTop() << " " << endl;
         s.pop();
     }
