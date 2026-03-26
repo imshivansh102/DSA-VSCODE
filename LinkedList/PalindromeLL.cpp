@@ -14,7 +14,7 @@ class Node {
     }
 };
 
-void print(Node* &head) { // always do this by using temp doing directly is too dangerous.
+void print(Node* head) { // always do this by using temp doing directly is too dangerous.
     Node* temp = head;
     while(temp != NULL) {
         cout << temp->data << " ";
@@ -22,7 +22,7 @@ void print(Node* &head) { // always do this by using temp doing directly is too 
     }
 }
 
-Node* reverse(Node* &head) {
+Node* reverse(Node* head) {
     Node* prev = NULL;
     Node* curr = head;
     Node* forward = curr->next;
@@ -38,7 +38,7 @@ Node* reverse(Node* &head) {
 
 }
 
-bool checkPalindrome(Node* &head) {
+bool checkPalindrome(Node* head) {
     if(head == NULL) {
         cout << "LL is empty:"<< endl;
         return true;
