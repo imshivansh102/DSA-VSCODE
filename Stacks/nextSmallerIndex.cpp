@@ -1,3 +1,4 @@
+// same question instead of next smaller element we have to return index of it.
 // find next smaller element.
 // For each element in an array, find the next smaller element to its right.
 // If no such element exists, return -1.
@@ -21,16 +22,17 @@ int main() {
     for(int i = v.size() - 1; i >= 0; i--) {
         int current = v[i];
         // apka answer stack me.
-        while(st.top() >= current) {
+        while(st.top() != -1 && v[st.top()] >= current) {
             st.pop();
 
         }
         //chota element mil gaya ans store.
         ans[i] = st.top();
         // push kardo current element ko.
-        st.push(current);
+        st.push(i);
 
     }
+    
     cout << "Input Vector." << endl;
     for(int i = 0; i < v.size(); i++) {
         cout << v[i] << " ";
