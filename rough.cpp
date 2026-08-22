@@ -1,36 +1,26 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
-class Node {
-public:
-    int data;
-    Node* next;
-
-    // Constructor
-    Node(int value) {
-        data = value;
-        next = NULL;
-    }
-};
-// Traversal
-void print(Node* &head) {
-    Node* temp = head;
-    while(temp != NULL) {
-        cout << temp->data << " ";
-        temp = temp->next;
-    }
-}
-
-int main() {
-    // Creating nodes
-    Node* head = new Node(10);
-    Node* second = new Node(20);
-
+int main(){
     
-    head->next = second;
-
-    print(head); 
+    stack <int> st;
+    st.push(5);
+    st.push(7);
+    st.push(8);
+    st.push(3);
+    st.push(0);
+    cout<<"The top element in stack is:"<< st.top() << endl;
+    st.pop();
+    cout<<"Now the top element in stack is:"<< st.top() << endl;
+    cout <<"The size of the stack is:" << st.size() << endl;
+    if(st.empty()){
+        cout << "The stack is empty." << endl;
+    }
+    else{
+        cout << "Stack is not empty." << endl;
+    }
+    cout << st.empty();
 
     return 0;
-    
+
 }
