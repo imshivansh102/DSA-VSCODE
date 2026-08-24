@@ -8,9 +8,9 @@ class Stack {
     int size;
 
     Stack(int size) {
-        arr = new int[size];
-        this->size = size;
-        top = -1;
+        arr = new int[size];   // Create array of given capacity
+        this->size = size;     // Store capacity in the object
+        top = -1;              // Stack starts empty
     }
 
     // functions.

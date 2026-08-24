@@ -9,6 +9,8 @@ int main(){
     st.push(8);
     st.push(3);
     st.push(0);
+
+
     cout<<"The top element in stack is:"<< st.top() << endl;
     st.pop();
     cout<<"Now the top element in stack is:"<< st.top() << endl;
